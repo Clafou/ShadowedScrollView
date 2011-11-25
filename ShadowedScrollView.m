@@ -86,33 +86,33 @@
     }
 
     // Position each of the layers
-	CGRect frameBack;
+    CGRect frameBack;
     frameBack.origin.x = -SHADOW_WIDTH;
-	frameBack.origin.y = -SHADOW_WIDTH;
-	frameBack.size.width = self.contentSize.width + 2 * SHADOW_WIDTH;
-	frameBack.size.height = self.contentSize.height + 2 * SHADOW_WIDTH;
-	contentShadowBack.frame = frameBack;
-    
+    frameBack.origin.y = -SHADOW_WIDTH;
+    frameBack.size.width = self.contentSize.width + 2 * SHADOW_WIDTH;
+    frameBack.size.height = self.contentSize.height + 2 * SHADOW_WIDTH;
+    contentShadowBack.frame = frameBack;
+
     CGRect frame = frameBack;
     frame.size.height = SHADOW_WIDTH;
-	contentShadowTop.frame = frame;
-	frame.origin.y = self.contentSize.height;
-	contentShadowBottom.frame = frame;
-    
+    contentShadowTop.frame = frame;
+    frame.origin.y = self.contentSize.height;
+    contentShadowBottom.frame = frame;
+
     frame = frameBack;
-	frame.size.width = SHADOW_WIDTH;
-	contentShadowLeft.frame = frame;
-	frame.origin.x = self.contentSize.width;
-	contentShadowRight.frame = frame;
+    frame.size.width = SHADOW_WIDTH;
+    contentShadowLeft.frame = frame;
+    frame.origin.x = self.contentSize.width;
+    contentShadowRight.frame = frame;
 
     frame.origin.x = self.contentOffset.x;
-	frame.origin.y = self.contentOffset.y;
+    frame.origin.y = self.contentOffset.y;
     frame.size.width = self.frame.size.width; // Note: changes when screen re-orients so needs to be reevaluated each time
-	frame.size.height = SHADOW_WIDTH;
-	edgeShadowTop.frame = frame;
-	frame.origin.y += self.frame.size.height - SHADOW_WIDTH;
-	edgeShadowBottom.frame = frame;    
-    
+    frame.size.height = SHADOW_WIDTH;
+    edgeShadowTop.frame = frame;
+    frame.origin.y += self.frame.size.height - SHADOW_WIDTH;
+    edgeShadowBottom.frame = frame;    
+
     [CATransaction commit];
 }
 

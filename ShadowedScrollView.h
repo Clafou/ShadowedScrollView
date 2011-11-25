@@ -17,13 +17,13 @@
 
 @interface ShadowedScrollView : UIScrollView
 {
-	CALayer *contentShadowBack;
-	CALayer *contentShadowTop;
-	CALayer *contentShadowRight;
-	CALayer *contentShadowLeft;
-	CALayer *contentShadowBottom;
-	CALayer *edgeShadowTop;
-	CALayer *edgeShadowBottom;
+    CALayer *contentShadowBack;
+    CALayer *contentShadowTop;
+    CALayer *contentShadowRight;
+    CALayer *contentShadowLeft;
+    CALayer *contentShadowBottom;
+    CALayer *edgeShadowTop;
+    CALayer *edgeShadowBottom;
     UIColor *lightColor;
     UIColor *darkColor;
 }
