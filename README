@@ -7,3 +7,15 @@ With thanks to Matt Galagher at Cocoa With Love for his article, which was a sta
 This code is licensed under the BSD license that is available at: http://www.opensource.org/licenses/bsd-license.php
 
 Please consider giving credit to the author and/or letting him know if you use this code.
+
+
+Usage
+-----
+
+Anywhere you instantiate a UIScrollView, specify this class instead. ShadowedScrollView is a subclass of UIScrollView which add Safari-style gradients around the content view.
+
+For example, replace:
+	UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:frame];
+
+With this:
+	UIScrollView *scrollView = [[ShadowedScrollView alloc] initWithFrame:frame];
